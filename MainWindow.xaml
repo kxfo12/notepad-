@@ -1,0 +1,37 @@
+﻿<Window x:Class="notepad___.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:notepad___"
+        mc:Ignorable="d"
+        Title="{Binding FileName}" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Click="New_Button" />
+                <MenuItem Header="Open" Click="Open_Button" />
+                <MenuItem Header="Save" Click="Save_Button" />
+                <MenuItem Header="Close" Click="Close_Button" />
+            </MenuItem>
+            <MenuItem Header="Format">
+                <MenuItem Header="text color">
+                    <MenuItem 
+                        IsCheckable="False"
+                        IsChecked="True"
+                        /> Dzień noc
+                </MenuItem>
+                <MenuItem>
+                    <MenuItem Click="RedText_Button"/>
+                    <MenuItem />
+                    <MenuItem />
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBox Width="800" Height="450" AcceptsReturn="True" 
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 x:Name="TextBoxx" TextChanged="TitleUpdate"/>
+                
+    </DockPanel>
+</Window>
