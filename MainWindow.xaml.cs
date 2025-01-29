@@ -96,7 +96,18 @@ namespace notepad___
 
         private void RedText_Button(object sender, RoutedEventArgs e)
         {
+            TextBoxx.Foreground = Brushes.Red;
+        }
+        private void AboutAplicaion_Button(object sender, RoutedEventArgs e)
+        {
+            Window2 windowAboutApplication = new Window2();
+            windowAboutApplication.Show();//Można działać w tle
+        }
 
+        private void AboutAuthor_Button(object sender, RoutedEventArgs e)
+        {
+            Window3 windowAboutAuthor = new Window3();
+            windowAboutAuthor.ShowDialog();//nie można działać w tle
         }
     }
 }

@@ -19,19 +19,29 @@
                     <MenuItem 
                         IsCheckable="False"
                         IsChecked="True"
-                        /> Dzień noc
+						Header="Dzień/noc"
+                        />
                 </MenuItem>
-                <MenuItem>
-                    <MenuItem Click="RedText_Button"/>
-                    <MenuItem />
-                    <MenuItem />
+                <MenuItem Header="color">
+                    <MenuItem Header="Red" Click="RedText_Button" />
+                    <MenuItem Header="Red" Click="RedText_Button" />
+                    <MenuItem Header="Red" Click="RedText_Button" />
                 </MenuItem>
             </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy" Command="ApplicationCommands.Copy" />
+                <MenuItem Header="Paste" Command="ApplicationCommands.Paste" />
+                <MenuItem Header="Cut" Command="ApplicationCommands.Cut" />
+                <MenuItem Header="Undo" Command="ApplicationCommands.Undo" />
+            </MenuItem>
+            <MenuItem Header="Info">
+                <MenuItem Header="O aplikacji" Click="AboutAplicaion_Button"/>
+				<MenuItem Header="O autorze" Click="AboutAuthor_Button" />
+			</MenuItem>
         </Menu>
         <TextBox Width="800" Height="450" AcceptsReturn="True" 
                  TextWrapping="Wrap"
                  VerticalScrollBarVisibility="Auto"
                  x:Name="TextBoxx" TextChanged="TitleUpdate"/>
-                
     </DockPanel>
 </Window>
