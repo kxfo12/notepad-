@@ -109,5 +109,21 @@ namespace notepad___
             Window3 windowAboutAuthor = new Window3();
             windowAboutAuthor.ShowDialog();//nie można działać w tle
         }
+        private void ColorMode_White(object sender, RoutedEventArgs e)
+        {
+            if(TextBoxx != null)
+            {
+                TextBoxx.Foreground = Brushes.White;
+                TextBoxx.Background = Brushes.Black;
+            }
+        }
+        private void ColorMode_Black(object sender, RoutedEventArgs e)
+        {
+            if (TextBoxx != null)
+            {
+                TextBoxx.Foreground = Brushes.Black;
+                TextBoxx.Background = Brushes.White;
+            }
+        }
     }
 }
