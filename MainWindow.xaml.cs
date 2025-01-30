@@ -98,6 +98,14 @@ namespace notepad___
         {
             TextBoxx.Foreground = Brushes.Red;
         }
+        private void GreenText_Button(object sender, RoutedEventArgs e)
+        {
+            TextBoxx.Foreground = Brushes.Green;
+        }
+        private void BlueText_Button(object sender, RoutedEventArgs e)
+        {
+            TextBoxx.Foreground = Brushes.Blue;
+        }
         private void AboutAplicaion_Button(object sender, RoutedEventArgs e)
         {
             Window2 windowAboutApplication = new Window2();
@@ -124,6 +132,17 @@ namespace notepad___
                 TextBoxx.Foreground = Brushes.Black;
                 TextBoxx.Background = Brushes.White;
             }
+        }
+        private void OfYourChoice_Button(object sender, RoutedEventArgs e)
+        {
+            WindowColor windowColor = new WindowColor();
+            windowColor.ShowDialog();
+            TextBoxx.Background = new SolidColorBrush(windowColor.newcolor);
+        }
+        private void ChangeFont(object sender, RoutedEventArgs e)
+        {
+            Font windowFont = new Font();
+            windowFont.ShowDialog();
         }
     }
 }

@@ -24,9 +24,17 @@
                 </MenuItem>
                 <MenuItem Header="color">
                     <MenuItem Header="Red" Click="RedText_Button" />
-                    <MenuItem Header="Red" Click="RedText_Button" />
-                    <MenuItem Header="Red" Click="RedText_Button" />
+                    <MenuItem Header="Green" Click="GreenText_Button" />
+                    <MenuItem Header="Blue" Click="BlueText_Button" />
                 </MenuItem>
+                <MenuItem 
+                    Header="OfYourChoice"
+                    Click="OfYourChoice_Button">
+                    
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Font">
+                <MenuItem Header="FontSize" Click="ChangeFont"></MenuItem>
             </MenuItem>
             <MenuItem Header="Edit">
                 <MenuItem Header="Copy" Command="ApplicationCommands.Copy" />
