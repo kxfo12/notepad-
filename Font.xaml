@@ -15,7 +15,7 @@
             <ComboBoxItem>pogrubiona kursywa</ComboBoxItem>
         </ComboBox>
         <TextBlock>Rozmiar czcionki</TextBlock>
-        <ListView ItemsSource="{Binding AvalibleFontSize}" SelectedItem="3"></ListView>
+        <ListView ItemsSource="{Binding AvalibleFontSize}" SelectedValue="{Binding Size}"></ListView>
         <Label/>
         <Button Click="Do_Changes">Zmien</Button>
     </UniformGrid>

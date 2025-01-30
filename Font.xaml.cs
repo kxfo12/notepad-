@@ -19,6 +19,9 @@ namespace notepad___
     /// </summary>
     public partial class Font : Window
     {
+        public string WhichStyle { get; set; } = "";
+        public bool IsBold { get; set; } = false;
+        public int Size { get; set; } = 12;
         public List<int> AvalibleFontSize { get; set; } = new List<int>();
         public Font()
         {
@@ -32,7 +35,25 @@ namespace notepad___
 
         private void Do_Changes(object sender, RoutedEventArgs e)
         {
-
+            switch (fontStyle.SelectedIndex)
+            {
+                case 0:
+                    WhichStyle = "normalna";
+                    IsBold = false;
+                    break;
+                case 1:
+                    WhichStyle = "normalna";
+                    IsBold = true;
+                    break;
+                case 2:
+                    WhichStyle = "italic";
+                    IsBold = false;
+                    break;
+                case 3:
+                    WhichStyle = "italic";
+                    IsBold = true;
+                    break;
+            }
         }
     }
 }
